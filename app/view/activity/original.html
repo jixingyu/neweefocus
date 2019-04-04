@@ -1,0 +1,19 @@
+{% extends "layout/base.html" %}
+
+{% block title%}activity{% endblock%}
+{% block description %}
+  <meta name="description" content="描述">
+{% endblock %}
+{% block keywords %}
+  <meta name="keywords" content="关键词">
+{% endblock %}
+
+{% block content %}
+  <p>page:{{ paginator|dump }}</p>
+  <h1>activity List</h1>
+  <ul>
+    {% for activity in activities %}
+    <li>{{ activity|dump }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

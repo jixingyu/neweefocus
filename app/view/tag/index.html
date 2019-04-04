@@ -1,0 +1,19 @@
+{% extends "layout/base.html" %}
+
+{% block title%}Tag{% endblock%}
+{% block description %}
+  <meta name="description" content="描述">
+{% endblock %}
+{% block keywords %}
+  <meta name="keywords" content="关键词">
+{% endblock %}
+
+{% block content %}
+  <p>page:{{ paginator|dump }}</p>
+  <h1>Tag - Article List</h1>
+  <ul>
+    {% for article in articles %}
+    <li>{{ article|dump }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

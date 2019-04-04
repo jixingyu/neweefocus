@@ -1,0 +1,15 @@
+{% extends "layout/base.html" %}
+
+{% block title%}comment{% endblock%}
+{% block description %}
+  <meta name="description" content="描述">
+{% endblock %}
+{% block keywords %}
+  <meta name="keywords" content="关键词">
+{% endblock %}
+
+{% block content %}
+  <p>user:{{ post.user|dump }}</p>
+  <p>post: {{ post|dump }}</p>
+  <p>target: {{ target|dump }}</p>
+{% endblock %}

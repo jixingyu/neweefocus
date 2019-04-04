@@ -1,0 +1,22 @@
+{% extends "layout/base.html" %}
+
+{% block title%}comment{% endblock%}
+{% block description %}
+  <meta name="description" content="描述">
+{% endblock %}
+{% block keywords %}
+  <meta name="keywords" content="关键词">
+{% endblock %}
+
+{% block content %}
+  <p>page:{{ paginator|dump }}</p>
+  <p>article: {{ target|dump }}</p>
+  <p>root: {{ root|dump }}</p>
+  <p>active: {{ active|dump }}</p>
+  <h1>comment List</h1>
+  <ul>
+    {% for comment in posts %}
+    <li>{{ comment|dump }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "layout/base.html" %}
+
+<!--TDK-->
+{% block title%}Article{% endblock%}
+{% block description %}
+  <meta name="description" content="描述">
+{% endblock %}
+{% block keywords %}
+  <meta name="keywords" content="关键词">
+{% endblock %}
+
+{% block content %}
+  <h1>Sponsor List</h1>
+  <ul>
+    {% for cluster in clusters %}
+    <li>{{ cluster|dump }}</li>
+    {% endfor %}
+  </ul>
+  <h1>Resource List</h1>
+  {% for resource in newestResources %}
+  <h3>{{ resource.title }}</h3>
+  <ul>
+    {% for item in resource.items %}
+    <li>{{ item|dump }}</li>
+    {% endfor %}
+  </ul>
+  {% endfor %}
+{% endblock %}

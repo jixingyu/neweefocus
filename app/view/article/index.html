@@ -1,0 +1,26 @@
+{% extends "layout/base.html" %}
+
+<!--Article TDK-->
+{% block title%}Article{% endblock%}
+{% block description %}
+  <meta name="description" content="描述">
+{% endblock %}
+{% block keywords %}
+  <meta name="keywords" content="关键词">
+{% endblock %}
+
+{% block content %}
+<p>page:{{ paginator|dump }}</p>
+<h1>Block List</h1>
+<ul>
+  {% for i,block in blocks %}
+  <li>{{ i|dump }}:{{ block|dump }}</li>
+  {% endfor %}
+</ul>
+  <h1>Article List</h1>
+  <ul>
+    {% for article in articles %}
+    <li>{{ article|dump }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

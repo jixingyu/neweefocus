@@ -1,0 +1,17 @@
+{% extends "layout/base.html" %}
+
+<!--Article TDK-->
+{% block title%}Article detail{% endblock%}
+{% block description %}
+  <meta name="description" content="描述">
+{% endblock %}
+{% block keywords %}
+  <meta name="keywords" content="关键词">
+{% endblock %}
+
+{% block content %}
+  <h1>Article Detail</h1>
+  <div>
+    {{ article|dump }}
+  </div>
+{% endblock %}

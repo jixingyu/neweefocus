@@ -1,0 +1,19 @@
+{% extends "layout/base.html" %}
+
+<!--demo TDK-->
+{% block title%}DEMO页{% endblock%}
+{% block description %}
+  <meta name="description" content="描述">
+{% endblock %}
+{% block keywords %}
+  <meta name="keywords" content="关键词">
+{% endblock %}
+
+{% block content %}
+  <h1>User</h1>
+  <ul>
+    {% for name, item in cUser %}
+    <li>{{ name }}: {{ item }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

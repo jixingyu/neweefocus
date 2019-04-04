@@ -1,0 +1,25 @@
+{% extends "layout/base.html" %}
+
+{% block title%}Article{% endblock%}
+{% block description %}
+  <meta name="description" content="描述">
+{% endblock %}
+{% block keywords %}
+  <meta name="keywords" content="关键词">
+{% endblock %}
+
+{% block content %}
+  <p>page:{{ paginator|dump }}</p>
+  <h1>categories</h1>
+  <ul>
+    {% for id,category in categories %}
+    <li>{{ category|dump }}</li>
+    {% endfor %}
+  </ul>
+  <h1>enewsletter List</h1>
+  <ul>
+    {% for enewsletter in enewsletters %}
+    <li>{{ enewsletter|dump }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
